@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Notable Members | CodeSpace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="./js/loadMembersAJAXjQuery.js"></script>
+  <style>
+  
+  
+  body{
+  
+   background-color:#2e2e1f ;
+  
+  }
+    .navbar {
+      
+     
+	  background-color:#2e2e1f ;
+	  width:100%;
+	  margin-top:15px;
+	  border-radius:5px;
+	
+	  margin-left:2px; 
+    }
+	
+.sideBar1,.sideBar2,.sideBar3{
+
+
+ background-color:#10100a;
+ border-radius: 5px;
+ height:180x;
+ margin-top:38px;
+ width:95%;
+ margin-bottom:20px;
+
+
+}	
+	
+	
+	
+  .container
+  {
+ 
+
+ background-color:#10100a;
+ border-radius: 5px;
+ height:180x;
+
+}
+
+.panel{
+ margin-top:8px;
+ height:38px;
+ background-color:#2e2e1f;
+ border-color:#2e2e1f;
+color:white;
+}
+.panel a{ color:white;
+margin-top:20px;
+padding:10px;
+margin-bottom:10px;
+
+
+}
+.postContainer{
+background-color:black;
+color:white;
+height:100%;
+margin-bottom:10px;
+border-radius:5px;
+}
+
+h3{
+color:white;
+
+
+}
+
+.userStats{
+display:inline-block;
+}
+
+
+
+
+  
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+	  border-radius:5px;	
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+   
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+
+	
+  
+		
+  
+	<div class="container">
+	
+	
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">CodeSpace</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	  <li><a href="#">Forums</a></li>
+        <li class="active"><a href="#">Members</a></li>
+        <li><a href="#">Staff</a></li>
+		<li><a href="#">Rules</a></li>
+		<li><a href="#">About</a></li>
+      </ul>
+      <!-- <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form> -->
+      <div class= "dropdown nav navbar-nav navbar-right">
+	  <button class="btn btn-default dropdown-toggle" "glyphicon glyphicon-user" type="button" data-toggle="dropdown">My Account</button>
+	  
+	  <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="#">My Profile</a></li>
+      <li><a tabindex="-1" href="#">Recent Activites</a></li>
+      </ul>
+	  
+	  
+      </div>
+    </div>
+  </div>
+</nav>
+	
+	
+	
+		<div class="panel panel-default">
+		
+			<div>
+					<a>Forums </a><span class="arrow">»</span>
+					
+					<a>Members </a> 
+			</div>		
+			
+		</div>
+	
+	
+
+<div class="container-fluid">
+  <div class="row content">
+      <h3>Notable Members</h3>
+
+    <div class=" postContainer col-sm-9">
+    
+      
+      
+	  
+   <section id="main" class="group">
+		<!-- Members are loaded below -->
+		<section id="memberArea" class="">
+			
+			
+		</section>
+	</section> 
+		
+
+     
+      <br>
+     
+     <!-- <img src="thumbnail.jpg" height="42" width="42">
+	 <h5><span class="glyphicon glyphicon-time"></span>R.I.P Reginald. , Male</h5>
+      <h5><span class="glyphicon glyphicon-time"></span>Messages: 8,192 Likes Received: 4,468 Trophy Points: 163</h5>
+       -->
+      
+	  
+	  
+	  
+	  
+     </div>
+	 
+	
+	 
+ 
+
+ <div class="container-fluid">
+	<div class="row content">
+		<div class="col-sm-3 sidenav">
+		
+		
+		<div class="sideBar1">
+			<div class="panel panel-default">
+				<h4>Find Memeber</h4>
+		   </div>
+		
+		  
+		  <div class="input-group">
+			<input type="text" name= "search" id= "search" class="form-control" placeholder="Memeber name...">
+			<span class="input-group-btn">
+			  <button class="btn btn-default" type="button">
+				<span class="glyphicon glyphicon-search"></span>
+			  </button>
+			</span>
+			<ul class="list-group" id="result"></ul>
+		  </div>
+		  <br>
+		</div>  
+		
+		  <div id="birthday" class="sideBar2" >
+			  <div class="panel panel-default" >
+				<h4>Member Birthdays</h4>
+			  </div>
+			  
+		  </div>
+		  
+		  <div class="sideBar3">
+			  <div class="panel panel-default">
+				<h4>Members Online</h4>
+			  </div>
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  hvjbkkl,kl;pokmk
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  rtyguhijo;kpl;;.
+			  hvjbkkl,kl;pokmk
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+			  cfhvjbknml,;;,l,lb
+			  dxfrftgyhuijokkook
+		  </div>
+		  
+		  
+		  
+		</div>
+		
+		
+
+	</div>
+ </div>
+  
+  
+  
+</div>
+  </div>
+  </div>
+</body>
+</html>

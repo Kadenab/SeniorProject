@@ -1,0 +1,17 @@
+[
+	{
+		"email": "bb@wb.com",
+		"password" : "1234",
+		"name": "Bugs"
+	},
+	{
+		"email": "wiley@wb.com",
+		"password" : "5678",
+		"name": "Wiley"
+	},
+	{
+		"email": "runner@wb.com",
+		"password" : "9012",
+		"name": "Road Runner"
+	}
+]

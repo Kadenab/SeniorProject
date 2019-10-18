@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Notable Members | CodeSpace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="./js/loadMembersAJAXjQuery.js"></script>
+  <style>
+ 
+
+  
+ 
+    .navbar
+		{
+		margin-bottom:0px;
+		margin-top:0px;
+		  background-color:#1c1c1c;;
+		  border-radius:0px;
+		  border-color:black ;
+			color:white;
+       }
+	
+	#brandName
+		{
+		 color:Yellow;		
+		 font-size: 35px;
+		 font-weight:bold;
+		 font-style:italic;
+		 font-family:Times New Roman;
+		 }
+
+		#birthday{
+		 height:180px;
+		
+		 color:#626466;
+		 margin-left:28%;
+		 margin-top:10%;
+		}
+
+		#memberContainer{
+		background-color:#1c1c1c;
+		border-radius:5px;
+		margin-left:15px;
+		
+		}
+
+		 #memberPanel{
+		 
+		 margin-top:10px;
+		 }
+
+
+
+		#memberRow{
+
+		margin-top:30px;
+
+		}
+
+		
+		#memberHeader{
+		font-weight: bold;
+		margin-top:20px;
+
+		}
+
+		
+		#pageContainer
+		  {
+		 
+		margin-top:0px;
+		 background-color:#141313;
+		 
+		 height:180x;
+		 width:100%;
+
+
+		}	
+		
+		.panel{
+
+		 
+		background-color:#1c1c1c;
+		 border-color:#343435;
+		color:black;
+		}
+		
+		.postContainer{
+		 border-color:#343435;
+		background-color:#1c1c1c;
+		color:white;
+		height:100%;
+		margin-top:8px;
+		margin-bottom:10px;
+		border-radius:3px;
+		}
+
+		h3{
+		color:white;
+
+
+		}
+
+		.panelText{
+
+		margin-left:10px;
+
+		}
+
+
+
+		.userStats{
+		display:inline-block;
+		}
+
+
+		.modal-content{
+		width:97.8%;
+		}
+
+
+		#modalFooter
+		{
+		background-color:grey;
+		border-radius:5px;
+		}
+
+		.close
+		{
+		margin-right:10px;
+		margin-top:0px;
+
+
+
+		}
+
+		#navigation{
+		margin-top:5px;
+
+		}
+
+
+		.action{
+
+		text-align:center;
+		margin-bottom:10px;
+		}
+
+		.img-circle
+		{
+		height:90px;
+		width:90px;
+		margin-top:8px;
+
+		}
+
+		.action .btn
+		{background-color:grey;
+		color:white;
+
+		}
+
+		.user-info-block{
+		background-color:pink;
+
+
+		}
+		#userHeader{
+		text-align:center;
+
+
+		}
+
+
+		#inputBtn
+		{
+
+		margin-left:-29px;
+		}
+
+		#button
+		{
+		border-radius:5px;
+		background-color:yellow;
+		border-color:yellow;
+		margin-left:20px;
+		}
+
+		#search
+		{
+		height:33px;
+		width:222px;
+		
+		}
+		  
+
+    
+			
+		<!---- Profile card ----->
+		.user-details {
+		position: relative;
+		 padding: 0;}
+		 
+		.user-details .user-image {
+		position: relative;
+		  z-index: 1;
+		  width: 100%;
+		  text-align: center;}
+		  
+		 .user-image img { 
+		 clear: both;
+		 margin: auto;
+		 position: relative;}
+		 
+
+		.user-details .user-info-block 
+		{width: 65%;
+		 position:absolute;
+		 left:25%;
+		 top: 65px;
+		 background: rgb(255, 255, 255); 
+		 z-index: 0;
+		 padding-top: 35px;
+		 border-radius:5px; 
+		 background-color:white; 
+		 
+		 }
+		 
+		 .user-info-block .user-heading {
+		 width: 100%; 
+		 text-align: center;
+		color:white;
+		 
+		 background-color:#2e2e1f;}
+		 
+		 .user-info-block .navigation {
+		 float: left; 
+		 width: 100%;
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		 border-bottom: 2px solid grey;
+		 
+		 background-color:white;}
+		 
+		  .navigation li {
+		  float: left;
+		  margin: 0;
+		  padding: 0;
+		  }
+		  
+		   .navigation li a {
+		   padding: 20px 30px; 
+		   float: left;
+		   color:black;
+		   }
+		   
+		   .navigation li.active a {
+		   background: #428BCA;
+		   color: #fff;}
+		   
+		 .user-info-block .user-body {
+		 float: left; 
+		 padding: 5%;
+		 width: 100%;
+		  background-color:white;
+		  border-radius:5px;}
+		 
+		  .user-body .tab-content > div {
+		  float: left;
+		  width: 100%;
+		 }
+		  
+		  .user-body .tab-content h4 {
+		  width: 100%; 
+		  margin: 10px 0;
+		  color: #333;}
+		  
+		  #editBtn{
+		  margin-top:15px;
+		  margin-left:80px;
+		  
+		  }
+			
+		#atags{
+		 margin-top:10px;
+
+		}
+
+		#infoDiv
+		{
+
+		color:#626466;
+		left:560px;
+
+		}
+
+		.bdaymessage{
+
+
+		margin-left:45px;
+		margin-top:35px;
+		}
+
+		.bday{
+
+		margin-left:20px;
+
+		}
+
+		.events{
+		margin-bottom:15px;
+		font-size:20px;
+		}
+
+		#searchMenu{
+
+		background-color:white;
+		border-radius:5px;
+		
+		}
+
+		#inputArea{
+		background-color:#1c1c1c;
+		height:110px;
+		margin-left:0px;
+		margin-top:10px;
+		border-radius:5px;
+		}
+
+		
+
+  </style>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand" id= "brandName" href="/homepage">CodeSpace  |</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div>
+		  <ul class="nav navbar-nav">
+			<li><a href="/homepage">Home</a></li>
+			<li><a href="/membersPage">Members</a></li>
+			<li><a href="#">About</a></li>	
+		  </ul>
+		 
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			  <a href="/username" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UserName</a>
+			  <ul class="dropdown-menu">
+				<li><a href="#"></a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Settings</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="/logout">Logout</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+		
+	
+	
+ 		
+		
+  
+<div class="container" id="pageContainer">
+	
+	
+		
+	
+	
+	
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				  <h3 id ="memberHeader">Notable Members</h3>
+			</div>
+
+		</div>
+	
+		<div class="row content ">
+				<div class=" postContainer col-sm-9">
+						<section id="main" class="group">
+							<!-- Members are loaded below -->
+							<section id="memberArea" class="">
+							</section>
+						</section> <br>
+				</div>
+		  
+	 
+			
+				<div class="col-sm-3">
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h4 class="panel-title">
+								 Find Member
+								</h4>
+							  </div>
+							  <div id="collapse1" class="panel-collapse collapse in">
+								<div class="panel-body ">
+										
+				
+									  
+									<div class="col-sm-9" >
+										<div class="input-group">
+											<input type="text" name= "search" id= "search" class="form-control" placeholder="Enter member name..." >
+											 <div id="searchMenu">
+											 </div>
+										</div>
+									</div>
+								
+									<div class="col-sm-3" id="inputBtn" >
+										<span class="input-group-btn">
+										  <button id= "button" class="btn btn-default" type="button">
+										  
+											<span class="glyphicon glyphicon-search"></span>
+										  </button>
+										</span>
+									</div>
+								
+									 
+								</div>
+							  </div>
+							</div>
+
+									
+									  
+					  
+							<div id="memberRow">
+									
+								<div class="panel panel-default">
+								    <div class="panel-heading">
+										<h4 class="panel-title">
+										 Member Birthdays
+										</h4>
+								    </div>
+								   
+										<div class="panel-body" id="birthday">
+										 
+										
+										</div>
+								    
+								</div>
+							</div>
+									  
+									  
+						</div>	  
+				</div>	
+			  
+			</div>
+						
+						
+
+					 
+					 
+			</div>
+				 
+				
+				 
+	</div>
+
+
+  
+
+<!------------------------  Modal---------------------------------------->
+  
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+     
+	 
+	  <div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-6 user-details">
+            
+            
+			<div class="user-info-block">
+			 <button type="button" class="close" data-dismiss="modal">&times;</button> 
+               
+			   <div class="user-heading">
+                   
+					
+					
+                </div>
+				
+				
+		   
+                <ul class="navigation" id="navigation">
+									
+                    <li class="active">
+                        <a data-toggle="tab" href="#account">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#education">
+                            <span class="glyphicon glyphicon-education"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#skills">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                        </a>
+                    </li>
+					
+					    <button type="button"   id="editBtn" class="btn btn-default btn-sm">
+						  <span class="glyphicon glyphicon-edit"></span> Edit
+						</button>
+                </ul>
+                <div class="user-body">
+                    <div class="tab-content">
+                        <div id="account"  class="tab-pane active">
+                            <h4>Account Information</h4>
+                        </div>
+                        <div id="education"  class="tab-pane">
+                            <h4>Eduation</h4>
+                        </div>
+                        <div id="skills"  class="tab-pane">
+                            <h4>Skills</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+	  
+	  
+	  
+   
+	
+		   
+        </div>
+      </div>
+      
+    </div>
+ 
+ 
+</div>
+  
+ </div> 
+  
+  
+  
+</body>
+</html>
+
+

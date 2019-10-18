@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CodeSpace | Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./js/homepageAJAXjQuery.js"></script>
+  
+  
+  <style>
+ 
+
+  
+ 
+    .navbar
+		{
+		margin-bottom:0px;
+		margin-top:0px;
+		  background-color:#1c1c1c;;
+		  border-radius:0px;
+		  border-color:black ;
+			color:white;
+       }
+	   
+	#memberArea{
+
+	height:100%;	
+
+}	
+	
+	#brandName
+		{
+		 color:Yellow;		
+		 font-size: 35px;
+		 font-weight:bold;
+		 font-style:italic;
+		 font-family:Times New Roman;
+		 }
+
+		#birthday{
+		 height:180px;
+		
+		 color:#626466;
+		 margin-left:28%;
+		 margin-top:10%;
+		}
+
+		#memberContainer{
+		background-color:#1c1c1c;
+		border-radius:5px;
+		margin-left:15px;
+		margin-right:20px;
+		
+		
+		}
+
+		 #memberPanel{
+		 
+		 margin-top:10px;
+		 }
+
+
+
+		#memberRow{
+
+		margin-top:30px;
+
+		}
+
+		
+		#memberHeader{
+		font-weight: bold;
+		margin-top:25px;
+
+		}
+
+		
+		#pageContainer
+		  {
+		 
+		margin-top:0px;
+		 background-color:#141313;
+		 
+		 height:180x;
+		 width:100%;
+
+
+		}	
+		
+		.postContainer{
+
+		background-color:#1c1c1c;
+		color:white;
+	   
+		margin-top:8px;
+		margin-bottom:10px;
+		border-radius:3px;
+		
+		}
+
+		h3,h4{
+		color:white;
+
+
+		}
+
+		
+
+		.panel{
+
+		 
+		 background-color:#1c1c1c;
+		 border-color:#343435;
+		color:black;
+		}
+
+		.panel-heading{
+
+		 
+		 background-color:yellow;
+		 border-color:#343435;
+		
+		}
+
+
+		}
+
+		#navigation{
+		margin-top:5px;
+
+		}
+
+
+		.action{
+
+		text-align:center;
+		margin-bottom:10px;
+		}
+
+		.img-circle
+		{
+		height:90px;
+		width:90px;
+		margin-top:8px;
+
+		}
+
+		.action .btn
+		{background-color:grey;
+		color:white;
+
+		}
+
+		.user-info-block{
+		background-color:pink;
+
+
+		}
+		#userHeader{
+		text-align:center;
+
+
+		}
+
+
+		#inputBtn
+		{
+
+		margin-left:-29px;
+		}
+
+		#button
+		{
+		border-radius:5px;
+		background-color:yellow;
+		border-color:yellow;
+		margin-left:20px;
+		}
+
+		#search
+		{
+		height:33px;
+		width:228px;
+		
+		}
+		  
+
+    
+			
+		
+
+		.bdaymessage{
+
+
+		margin-left:45px;
+		margin-top:35px;
+		}
+
+		.bday{
+
+		margin-left:20px;
+
+		}
+
+		.events{
+		margin-bottom:15px;
+		font-size:20px;
+		}
+
+		#searchMenu{
+
+		background-color:white;
+		border-radius:5px;
+		
+		}
+
+		#inputArea{
+		background-color:#1c1c1c;
+		height:110px;
+		margin-left:0px;
+		margin-top:2px;
+		border-radius:5px;
+		margin-right:10px;
+		}
+		
+		#chat{
+		background-color:white;
+		
+		}
+
+		
+
+  </style>
+</head>
+<body>
+
+<div  id="pageContainer">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand" id= "brandName" href="/homepage">CodeSpace  |</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div>
+		  <ul class="nav navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="/membersPage">Members</a></li>
+			<li><a href="#">About</a></li>	
+		  </ul>
+		 
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" > Username</a>
+			  <ul class="dropdown-menu">
+				<li><a href="#"></a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Settings</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="/logout">Logout</a></li>
+			  </ul>
+			</li>
+			</li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+		
+	
+	
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					  <h3 id ="memberHeader">Forums</h3>
+				</div>
+
+			</div>
+					
+			<div class="row ">
+					<div class=" col-sm-9">
+					
+					  <div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  CodeSpace Nation
+							</h4>
+						  </div>
+						  <div id="collapse1" class="panel-collapse collapse in">
+							<div   class="panel-body">
+							
+								<a href="/chatPage">  News</a>
+								 <p> News is posted here!</p>
+									 
+								   <a href="/chatPage">Articles</a>
+								 
+								  <p>CodeSpace-exclusive articles brought to you by the News Team!</p>
+								  
+								  <a href="/chatPage">Showcase</a>
+								 <p> The place for the best of the best.</p>
+								  
+								 <a href="/chatPage"> Introductions</a>
+								 <p> New to CodeSpace? Introduce yourself here!</p>
+								 
+								 
+								  <a href="/chatPage">Bugs & Feedback</a>
+								  <p>Report any issues with the forum here, or give us some ideas to make the forum even better!</p>
+
+							
+							
+							</div>
+						  </div>
+						</div>
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							  A Programmers Dream
+							</h4>
+						  </div>
+						  <div id="collapse2" class="panel-collapse collapse in">
+							<div class="panel-body">
+							
+							<a href="/chatPage">  Web Developers</a>
+								 <p> Connect with developers, and work with programming languages like HTML, CSS, and Javascript to create websites and web applications. </p>
+									 
+								   <a href="/chatPage">Computer Engineers</a>
+								 
+								  <p>Learn to analyze, design, and develop computer hardware and software.</p>
+								  
+								  <a href="/chatPage">Computer Science</a>
+								 <p> Learn high-level, basic languages such as Java and C++. As you go on, you'll be introduced to more complex coding methods, including Prolog, Scheme, and machine code, also known as assembly language programming.</p>
+							</div>
+						  </div>
+						</div>
+						
+						<div class="panel panel-default">
+						  <div class="panel-heading">
+							<h4 class="panel-title">
+							 S.T.E.M Community 
+							</h4>
+						  </div>
+						  <div id="collapse3" class="panel-collapse collapse in">
+							<div class="panel-body">
+							 <a href="/chatPage"> Internships</a>
+								 <p> Find internships to help you gain much needed hands on experience in your field.</p>
+								 
+								 
+								  <a href="/chatPage">Networking</a>
+								  <p>Share information between different divisions of the same company to share information and solve business problems.</p>
+							
+							</div>
+						  </div>
+						</div>
+					 
+					</div>
+						</div>
+						
+						
+				<div class="col-sm-3">
+							<div id="memberRow">
+									
+								<div class="panel panel-default">
+								    <div class="panel-heading">
+										<h4 class="panel-title">
+										 Member Birthdays
+										</h4>
+								    </div>
+								   
+										<div class="panel-body" id="birthday">
+										 
+										
+										</div>
+								    
+								</div>
+							</div>
+									  
+									  
+						</div>	  
+				</div>					 
+			</div>
+		</div>
+
+
+
+</body>
+</html>
+
+

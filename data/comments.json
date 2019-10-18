@@ -1,0 +1,9 @@
+
+posts [
+	{"comment":"who",
+		"date":"2018-03-05T19:16:24.385Z"
+	},
+	{"name":"Bugs",
+		"comment":"hello",
+	"date":"2018-03-05T19:19:30.426Z"}
+]

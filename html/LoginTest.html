@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/animate.css">
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	
+	<style>
+
+		 .navbar {
+      
+     
+	  background-color:#343435 ;
+	  width:100%;
+	  margin-top:15px;
+	  border-radius:0px;
+	  border-color:#343435 ;
+	  margin-left:2px; 
+    }
+
+	</style>
+	<title>Login test page</title>
+
+
+</head>
+<body>
+
+
+<div id="container"></div>
+	
+			
+
+					<div id="container1" class="container">
+						<form id="loginForm" class="Login animate"  method= "post" >
+							
+							<div class="loginMenu">
+							
+							
+							<button type="button" class="close-button">&times;</button>	
+												
+								<h3 id="text1">Email</h3>
+								<input id="loginEmail" type="text" placeholder="Enter Email" name="email"/>
+								<h3 id="text2">Password</h3>
+								<input id="loginPassword" type="password" placeholder="*******" name="pword"/>
+								<input  id="signin" type="submit" name ="signin"/>
+								
+							</div>
+						</form>
+					
+					</div>
+					
+					<div class="container2">
+						<form id= "signupForm" class="SignUP animate" method= "post">
+							<div class="signupMenu">
+								<h3 id="text3">Email</h3>
+								<input id="signupUsername" type="text" placeholder="Enter Username" name="username"/>
+								<h3 id="text4">Password</h3>
+								<input id="signupEmail" type="text" placeholder="Enter Email" name="email"/>
+								<h3 id="text5">User name</h3>
+								<input id="signupPassword" type="password" placeholder="*******" name="pword"/>
+								<input  id="signup" type="submit" name ="Sign Up"/>
+								
+							</div>
+						</form>
+					</div>
+					
+				
+		</div>
+					
+						
+			);
+		}
+	}
+	
+	
+	ReactDOM.render(
+				
+				 <div> 
+				
+					<FormArea/>
+						
+				 </div>,
+				  
+				    
+				
+				destination
+				);
+
+	</script>
+			
+			
+
+	
+
+	</body>
+	</html>

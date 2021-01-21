@@ -82,7 +82,7 @@
     "regjsparser": "^0.1.5",
     "repeating": "^2.0.1",
     "slash": "^1.0.0",
-    "socket.io": "^2.0.4",
+    "socket.io": "^2.4.0",
     "source-map": "^0.5.7",
     "source-map-support": "^0.4.18",
     "to-fast-properties": "^1.0.3"
